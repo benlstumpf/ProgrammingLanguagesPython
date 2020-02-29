@@ -13,9 +13,9 @@ import sys
 
 def main(numberOfRecords):
     submissionLastTime = 0
-    highTimeVariable = 10
+    timeVariable = 10
     for i in range(numberOfRecords):
-        id, submissionTime, requestedStart, requestedDuration = createPlane(submissionLastTime, highTimeVariable)
+        id, submissionTime, requestedStart, requestedDuration = createPlane(submissionLastTime, timeVariable)
         print(id, " ",randrange(1000), ", ",
               submissionTime, ", ",
               requestedStart, ", ",
@@ -23,11 +23,11 @@ def main(numberOfRecords):
               sep="")
         submissionLastTime = submissionTime
 
-def createPlane( lastTimeSubmition, highTimeVariable):
+def createPlane( lastTimeSubmition, timeVariable):
     id = getID(randrange(0, 11))
-    submissionTime = lastTimeSubmition + randrange(highTimeVariable)
-    requestedStart = submissionTime + randrange(highTimeVariable)
-    requestedDuration = randrange(1,highTimeVariable/2)
+    submissionTime = lastTimeSubmition + randrange(timeVariable)
+    requestedStart = submissionTime + randrange(timeVariable)
+    requestedDuration = randrange(1,timeVariable/2)
     return id, submissionTime, requestedStart, requestedDuration
 
 def getID(airLineNumber):
