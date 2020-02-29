@@ -13,39 +13,40 @@ import sys
 
 def main(numberOfRecords):
     submissionLastTime = 0
+    highTimeVariable = 10
     for i in range(numberOfRecords):
-        id, submissionTime, requestedStart, requestedDuration = createPlane(submissionLastTime)
-        print(id,
+        id, submissionTime, requestedStart, requestedDuration = createPlane(submissionLastTime, highTimeVariable)
+        print(id, " ",randrange(1000), ", ",
               submissionTime, ", ",
               requestedStart, ", ",
-              requestedDuration, ", ",
+              requestedDuration,
               sep="")
         submissionLastTime = submissionTime
 
-def createPlane( lastTimeSubmition):
-    id = getID
-    submissionTime = lastTimeSubmition + randrange(6)
-    requestedStart = submissionTime + randrange(6)
-    requestedDuration = randrange(6)
+def createPlane( lastTimeSubmition, highTimeVariable):
+    id = getID(randrange(0, 11))
+    submissionTime = lastTimeSubmition + randrange(highTimeVariable)
+    requestedStart = submissionTime + randrange(highTimeVariable)
+    requestedDuration = randrange(1,highTimeVariable/2)
     return id, submissionTime, requestedStart, requestedDuration
 
-def getID():
+def getID(airLineNumber):
      # 12 is the number of airlines listed at start of file
      # started counting at 1 and realized it at the end so united is at the top
     return {
-        "United Airlines" : 0,
-        "Aer Lingus" : 1,
-        "Air Canada" : 2,
-        "Air Choice One" : 3,
-        "Air France" : 4,
-        "Alaska Airlines" : 5,
-        "American Airlines" : 6,
-        "Boutique Air" : 7,
-        "Delta Air Lines" : 8,
-        "Frontier Airlines" : 9,
-        "KLM Royal Dutch Airlines" : 10,
-        "Spirit Airlines" : 11
-    }[randrange( 12)]
+        0: "United Airlines" ,
+        1: "Aer Lingus" ,
+        2: "Air Canada" ,
+        3: "Air Choice One" ,
+        4: "Air France" ,
+        5: "Alaska Airlines" ,
+        6: "American Airlines" ,
+        7: "Boutique Air" ,
+        8: "Delta Air Lines" ,
+        9: "Frontier Airlines" ,
+        10: "KLM Royal Dutch Airlines" ,
+        11: "Spirit Airlines"
+    }.get(airLineNumber)
 
 if __name__ == "__main__" :
     numberOfRecords = int(sys.argv[1])
