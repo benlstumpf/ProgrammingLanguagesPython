@@ -13,7 +13,7 @@ import sys
 
 def main(numberOfRecords):
     submissionLastTime = 0
-    timeVariable = 10
+    timeVariable = 6
     for i in range(numberOfRecords):
         id, submissionTime, requestedStart, requestedDuration = createPlane(submissionLastTime, timeVariable)
         print(id, " ",randrange(1000), ", ",
@@ -27,7 +27,7 @@ def createPlane( lastTimeSubmition, timeVariable):
     id = getID(randrange(0, 11))
     submissionTime = lastTimeSubmition + randrange(timeVariable)
     requestedStart = submissionTime + randrange(timeVariable)
-    requestedDuration = randrange(1,timeVariable/2)
+    requestedDuration = randrange(1,timeVariable)
     return id, submissionTime, requestedStart, requestedDuration
 
 def getID(airLineNumber):
