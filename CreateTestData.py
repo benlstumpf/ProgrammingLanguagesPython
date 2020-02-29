@@ -10,10 +10,12 @@
 #using randrange a lot so importing it as a function
 from random import randrange
 
+
+
 def main():
     passedArgument = sys.argv[0]
     submissionLastTime = 0
-    while i in range passedArgument:
+    while i in range(passedArgument):
         id, submissionTime, requestedStart, requestedDuration = createPlane(submissionLastTime)
         print(id,
               submissionTime, ", ",
@@ -22,7 +24,7 @@ def main():
               sep="")
         submissionLastTime = submissionTime
 
-def createPlane(lastTimeSubmition):
+def createPlane( lastTimeSubmition):
     id = getID
     submissionTime = lastTimeSubmition + randrange(6)
     requestedStart = submissionTime + randrange(6)
@@ -47,6 +49,5 @@ def getID():
         "Spirit Airlines" : 11
     }.get(randrange( 12)
 
-
-if __name__ == "__main__"
+if __name__ == "__main__" :
     main()
