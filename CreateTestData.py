@@ -1,17 +1,33 @@
 #Test Data Creation program
+
+#to enterData into a file in linux use the > or >> operators
+
 #MSP airlines are Aer Lingus, Air Canada, Air Choice One, Air France, Alaska Airlines, American Airlines, Boutique Air, Delta Air Lines, Frontier Airlines, KLM Royal Dutch Airlines, Spirit Airlines, United Airlines
 
 #format is ID, Submission Time, Requested Start, Requested Duration
+#e.g. Delta 160, 0, 0, 4
 
-import random
+#using randrange a lot so importing it as a function
+from random import randrange
 
 def main():
     passedArgument = sys.argv[0]
+    submissionLastTime = 0
     while i in range passedArgument:
-        if i%
+        id, submissionTime, requestedStart, requestedDuration = createPlane(submissionLastTime)
+        print(id,
+              submissionTime, ", ",
+              requestedStart, ", ",
+              requestedDuration, ", ",
+              sep="")
+        submissionLastTime = submissionTime
 
-def createPlane():
+def createPlane(lastTimeSubmition):
     id = getID
+    submissionTime = lastTimeSubmition + randrange(6)
+    requestedStart = submissionTime + randrange(6)
+    requestedDuration = randrange(6)
+    return id, submissionTime, requestedStart, requestedDuration
 
 def getID():
      # 12 is the number of airlines listed at start of file
@@ -29,7 +45,7 @@ def getID():
         "Frontier Airlines" : 9,
         "KLM Royal Dutch Airlines" : 10,
         "Spirit Airlines" : 11
-    }.get(random.randrange( 12)
+    }.get(randrange( 12)
 
 
 if __name__ == "__main__"
