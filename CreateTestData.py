@@ -9,13 +9,11 @@
 
 #using randrange a lot so importing it as a function
 from random import randrange
+import sys
 
-
-
-def main():
-    passedArgument = sys.argv[0]
+def main(numberOfRecords):
     submissionLastTime = 0
-    while i in range(passedArgument):
+    for i in range(numberOfRecords):
         id, submissionTime, requestedStart, requestedDuration = createPlane(submissionLastTime)
         print(id,
               submissionTime, ", ",
@@ -47,7 +45,8 @@ def getID():
         "Frontier Airlines" : 9,
         "KLM Royal Dutch Airlines" : 10,
         "Spirit Airlines" : 11
-    }.get(randrange( 12)
+    }[randrange( 12)]
 
 if __name__ == "__main__" :
-    main()
+    numberOfRecords = int(sys.argv[1])
+    main(numberOfRecords)
