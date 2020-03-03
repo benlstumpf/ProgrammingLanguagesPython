@@ -10,7 +10,7 @@ class Plane(object):
     submissionTime =
     requestedStart =
     requestedDuration =
-    timeFinished = requestedStart + requestedDuration
+    realTimeStart = requestedStart + requestedDuration
 
     def __init__(self, id, submissionTime, requestedStart, requestedDuration):
         super(Plane, self).__init__()
@@ -19,5 +19,5 @@ class Plane(object):
         self.requestedStart = requestedStart
         self.requestedDuration = requestedDuration
 
-    def setTimeFinished(self, time)
-        self.timeFinished = time
+    def setRealTimeStart(self, time)
+        self.realTimeStart = time
