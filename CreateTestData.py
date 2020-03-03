@@ -11,7 +11,7 @@
 from random import randrange
 import sys
 
-def main(numberOfRecords):
+def getTestData(numberOfRecords):
     submissionLastTime = 0
     timeVariable = 6
     for i in range(numberOfRecords):
@@ -50,4 +50,4 @@ def getID(airLineNumber):
 
 if __name__ == "__main__" :
     numberOfRecords = int(sys.argv[1])
-    main(numberOfRecords)
+    getTestData(numberOfRecords)
