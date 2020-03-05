@@ -18,8 +18,8 @@ class Plane(object):
         self.requestedStart = requestedStart
         self.requestedDuration = requestedDuration
 
-    def setRealTimeStart(self, time)
+    def setRealTimeStart(self, time):
         self.realTimeStart = time
 
-    def setScheduledTime(self, time)
+    def setScheduledTime(self, time):
         self.scheduledTime = time

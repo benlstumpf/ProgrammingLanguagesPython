@@ -5,7 +5,7 @@
 
 #Delta 160 (0-3), Delta 6 (4-9), UAL 120 (10-13)
 
-def printCurrentQueue (planeQueue, time)
+def printCurrentQueue (planeQueue, time):
     print("At time", time, "the queue would look like:", end=" ")
     for index in planeQueue
         if hasattr(index, 'realTimeStart'):
@@ -14,6 +14,6 @@ def printCurrentQueue (planeQueue, time)
             print(index.id, "(scheduled for", index.scheduledTime, ")", end=" ")
     print()
 
-def printFinalPrint(planeQueue)
+def printFinalPrint(planeQueue):
     for index in planeQueue
         print(index.id, "(", index.setRealTimeStart, "-", index.requestedDuration, "),", end=" ")
