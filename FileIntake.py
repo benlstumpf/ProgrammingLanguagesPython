@@ -12,6 +12,7 @@ def fileToList (fileName):
     for line in file:
         plane = stringToPlane(line)
         planeList.extend(plane)
+    return planeList
 
 def stringToPlane(string):
     string = string.rstrip()
