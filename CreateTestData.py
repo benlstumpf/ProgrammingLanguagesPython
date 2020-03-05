@@ -24,7 +24,7 @@ def getTestData(numberOfRecords):
         submissionLastTime = submissionTime
 
 def createPlane( lastTimeSubmition, timeVariable):
-    id = getID(randrange(0, 11))
+    id = getID(randrange(0, 17))
     submissionTime = lastTimeSubmition + randrange(timeVariable)
     requestedStart = submissionTime + randrange(timeVariable)
     requestedDuration = randrange(1,timeVariable)
@@ -46,6 +46,11 @@ def getID(airLineNumber):
         9: "Frontier Airlines" ,
         10: "KLM Royal Dutch Airlines" ,
         11: "Spirit Airlines"
+        12: "Condor"
+        13: "IcelandAir"
+        14: "JetBlue"
+        15: "Southwest Airlines"
+        16: "Sun Country Airlines"
     }.get(airLineNumber)
 
 if __name__ == "__main__" :
