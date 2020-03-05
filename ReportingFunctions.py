@@ -3,6 +3,7 @@
 
 #At time 2 the queue would look like: Delta 160 (started at 0), Delta 6 (scheduled for 4), UAL 120 (scheduled for 10)
 
+#Delta 160 (0-3), Delta 6 (4-9), UAL 120 (10-13)
 
 def printCurrentQueue (planeQueue, time)
     print("At time", time, "the queue would look like:", end=" ")
@@ -12,3 +13,7 @@ def printCurrentQueue (planeQueue, time)
         else
             print(index.id, "(scheduled for", index.scheduledTime, ")", end=" ")
     print()
+
+def printFinalPrint(planeQueue)
+    for index in planeQueue
+        print(index.id, "(", index.setRealTimeStart, "-", index.requestedDuration, "),", end=" ")
