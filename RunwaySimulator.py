@@ -5,8 +5,16 @@ def runway(submissionList):
     currentQueue = []
     finishedList = []
 
+
 def isFinished (submissionList, CurrentQueue):
     if not submissionList && not CurrentQueue:
         return True
     else:
-        False
+        return False
+
+def addNextPlane(submissionList, CurrentQueue, currentTime):
+    while submissionList[0].submissionTime == currentTime:
+        CurrentQueue.insert(1, submissionList[0])
+        sortPlanes(CurrentQueue)
+
+def sortPlanes(CurrentQueue):
