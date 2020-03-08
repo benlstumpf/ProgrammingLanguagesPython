@@ -4,7 +4,9 @@
 def runway(submissionList):
     currentQueue = []
     finishedList = []
-
+    currentTime = 0
+    while isFinished(submissionList, currentQueue):
+        addNextPlane(submissionList, CurrentQueue, currentTime)
 
 def isFinished (submissionList, CurrentQueue):
     if not submissionList and not CurrentQueue:
