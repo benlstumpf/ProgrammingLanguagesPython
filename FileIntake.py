@@ -5,7 +5,9 @@
 # Frontier Airlines 323, 5, 9, 2
 
 import PlaneClass
-
+"""
+docstring stub
+"""
 def fileToList (fileName):
     planeList = []
     file = open(fileName, 'r')
@@ -13,7 +15,9 @@ def fileToList (fileName):
         plane = stringToPlane(line)
         planeList.extend(plane)
     return planeList
-
+"""
+docstring stub
+"""
 def stringToPlane(string):
     string = string.rstrip()
     arrayFromSting = string.split(", ")
