@@ -18,6 +18,6 @@ def addNextPlane(submissionList, CurrentQueue, currentTime):
         sortPlanes(CurrentQueue)
 
 def sortPlanes(CurrentQueue):
-    for i in range( 2, len(CurrentQueue)):
+    for i in range( 2, len(CurrentQueue+1)):
         if CurrentQueue[i].submissionTime < CurrentQueue[i-1].submissionTime:
             CurrentQueue[i], CurrentQueue[i-1] = CurrentQueue[i-1] < CurrentQueue[i]
