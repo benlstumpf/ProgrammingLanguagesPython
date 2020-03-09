@@ -32,9 +32,9 @@ class Plane:
     def __init__(self, array):
         super(Plane, self).__init__()
         self.id = array[0]
-        self.submissionTime = array[1]
-        self.requestedStart = array[2]
-        self.requestedDuration = array[3]
+        self.submissionTime = int(array[1])
+        self.requestedStart = int(array[2])
+        self.requestedDuration = int(array[3])
 
 
     """
@@ -43,6 +43,8 @@ class Plane:
     def setRealTimeStart(self, time):
         self.realTimeStart = time
 
+    def getsubmissionTime(self):
+        return int(self.submissionTime)
 
     """
     docstring stub
