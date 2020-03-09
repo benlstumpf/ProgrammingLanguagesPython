@@ -4,7 +4,7 @@
 
 # Frontier Airlines 323, 5, 9, 2
 
-import PlaneClass
+from PlaneClass import Plane
 """
 docstring stub
 """
@@ -13,15 +13,15 @@ def fileToList (fileName):
     file = open(fileName, 'r')
     for line in file:
         plane = stringToPlane(line)
-        planeList.extend(plane)
+        planeList.append(plane)
     return planeList
 """
 docstring stub
 """
 def stringToPlane(string):
     string = string.rstrip()
-    arrayFromSting = string.split(", ")
+    arrayFromString = string.split(", ")
     arrayFromString[1] = int(arrayFromString[1])
     arrayFromString[2] = int(arrayFromString[2])
     arrayFromString[3] = int(arrayFromString[3])
-    return Plane(arrayFromSting)
+    return Plane(arrayFromString)
