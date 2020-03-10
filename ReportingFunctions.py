@@ -13,11 +13,11 @@ docstring stub
 def printCurrentQueue(planeQueue, time):
     print("At time", time, "the queue would look like:", end=" ")
     for index in planeQueue:
-        if hasattr(index, 'realTimeStart'):
+        if index.getRealTimeStart() <= time:
             print(index.id, "(started at", index.realTimeStart, ")", end=" ")
         else:
-            print(index.id, "(scheduled for", index.scheduledTime, ")", end=" ")
-
+            print(index.id, "(scheduled for", index.getRealTimeStart(), ")", end=" ")
+    print(len(planeQueue))
 """
 docstring stub
 """
