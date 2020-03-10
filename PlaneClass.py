@@ -36,6 +36,8 @@ class Plane:
         self.requestedStart = int(array[2])
         self.requestedDuration = int(array[3])
 
+    def getDuration(self):
+        return self.requestedDuration
 
     """
     docstring stub
@@ -49,5 +51,5 @@ class Plane:
     """
     docstring stub
     """
-    def setScheduledTime(self, time):
-        self.scheduledTime = time
+    def getRealTimeStart(self):
+        return self.realTimeStart

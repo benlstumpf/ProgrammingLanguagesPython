@@ -21,7 +21,4 @@ docstring stub
 def stringToPlane(string):
     string = string.rstrip()
     arrayFromString = string.split(", ")
-    arrayFromString[1] = int(arrayFromString[1])
-    arrayFromString[2] = int(arrayFromString[2])
-    arrayFromString[3] = int(arrayFromString[3])
     return Plane(arrayFromString)
