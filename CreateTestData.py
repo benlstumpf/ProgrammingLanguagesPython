@@ -45,11 +45,11 @@ def getID(airLineNumber):
         8: "Delta Air Lines" ,
         9: "Frontier Airlines" ,
         10: "KLM Royal Dutch Airlines" ,
-        11: "Spirit Airlines"
-        12: "Condor"
-        13: "IcelandAir"
-        14: "JetBlue"
-        15: "Southwest Airlines"
+        11: "Spirit Airlines",
+        12: "Condor",
+        13: "IcelandAir",
+        14: "JetBlue",
+        15: "Southwest Airlines",
         16: "Sun Country Airlines"
     }.get(airLineNumber)
 

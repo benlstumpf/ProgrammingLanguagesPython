@@ -23,4 +23,4 @@ docstring stub
 """
 def printFinalPrint(planeQueue):
     for index in planeQueue:
-        print(index.id, "(", index.setRealTimeStart, "-", index.requestedDuration, "),", end=" ")
+        print(index.id, "(", index.getRealTimeStart(), "-", index.getRealTimeStart()+index.getDuration()-1, "),", end=" ")
