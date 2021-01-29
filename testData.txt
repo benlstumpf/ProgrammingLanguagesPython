@@ -1,0 +1,10 @@
+Air Canada 2, 5, 13, 3
+Frontier Airlines 323, 5, 9, 2
+American Airlines 285, 8, 14, 3
+American Airlines 675, 12, 15, 4
+American Airlines 887, 14, 21, 4
+Air France 286, 14, 16, 2
+Frontier Airlines 679, 19, 27, 3
+Air Choice One 410, 25, 32, 1
+Air Canada 46, 34, 39, 3
+Air France 472, 38, 45, 2
